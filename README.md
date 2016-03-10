@@ -52,7 +52,7 @@ sudo node j5pi2go.js
 
 Once you start the bot (``sudo node j5pi2go.js``), you will see a bunch of logs from the sensors in the console. The following APIs are exposed through repl:
 
-#### Motors:
+#### Motors
 - ``>>> stop()``: Stops both motors
 - ``>>> forward(speed)``: Sets both motors to move forward at speed. 0 <= speed <= 100
 - ``>>> reverse(speed)``: Sets both motors to reverse at speed. 0 <= speed <= 100
@@ -63,7 +63,7 @@ Once you start the bot (``sudo node j5pi2go.js``), you will see a bunch of logs 
 - ``>>> go(leftSpeed, rightSpeed)``: controls motors in both directions independently using different positive/negative speeds. -100<= leftSpeed,rightSpeed <= 100    
 
 #### RGBLeds
-See [johnny-five api](http://johnny-five.io/api/led.rgb/#api) for ``frontRGBLed``|``rightRGBLed``|``backRGBLed``|``leftRGBLed``.
+See the [johnny-five api](http://johnny-five.io/api/led.rgb/#api) for ``frontRGBLed``|``rightRGBLed``|``backRGBLed``|``leftRGBLed``.
 
 Example:
 ``` 
