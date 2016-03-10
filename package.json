@@ -1,0 +1,19 @@
+{
+  "name": "j5-pi2go",
+  "version": "1.0.0",
+  "description": "",
+  "main": "j5pi2go.js",
+  "dependencies": {
+    "johnny-five": "^0.9.30",
+    "pigpio": "^0.3.2",
+    "raspi": "^2.0.0",
+    "raspi-io": "^5.4.1",
+    "raspi-soft-pwm": "git+https://github.com/tralves/raspi-soft-pwm.git"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tiago Alves",
+  "license": "ISC"
+}
