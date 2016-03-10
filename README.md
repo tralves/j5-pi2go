@@ -1,5 +1,7 @@
 j5-pi2go
-=======
+========
+
+<img src="http://4tronix.co.uk/store/resources/image/18/b7/b.jpg" height="200"> <img src="http://johnny-five.io/img/heres-johnny.png" height="200">
 
 ## Description
 This is a [johnny-five](http://johnny-five.io/) interface for the awesome robot kit [Pi2Go](http://www.pi2go.co.uk/) (not Pi2Go-Lite!). With this, you will be able access most of the sensors, motors and leds in the Pi2Go.
