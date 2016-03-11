@@ -22,7 +22,8 @@ I went with all the trouble of figuring out the right pins and johnny-five modul
 ## Installation
 
 ```Shell
-npm install https://github.com/tralves/j5-pi2go.git
+git clone https://github.com/tralves/j5-pi2go.git
+npm install
 sudo node j5pi2go.js
 ```
 
