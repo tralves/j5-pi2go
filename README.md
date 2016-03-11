@@ -21,30 +21,8 @@ I went with all the trouble of figuring out the right pins and johnny-five modul
 
 ## Installation
 
-In the raspbian shell.
-
-### Step 1 (required from [pigpio](https://github.com/fivdi/pigpio))
-
-The pigpio package is based on the
-[pigpio C library](https://github.com/joan2937/pigpio) so the C library needs
-to be installed first. Version V41 or higher of the pigpio C library is
-required. It can be installed with the following commands:
-
-```
-wget abyz.co.uk/rpi/pigpio/pigpio.zip
-unzip pigpio.zip
-cd PIGPIO
-make
-sudo make install
-```
-
-Note that the `make` command takes a while to complete so please be patient.
-
-### Step 2:
-
 ```Shell
-git clone https://github.com/tralves/j5-pi2go.git
-npm install
+npm install https://github.com/tralves/j5-pi2go.git
 sudo node j5pi2go.js
 ```
 

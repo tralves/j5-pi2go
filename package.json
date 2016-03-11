@@ -8,7 +8,7 @@
     "pigpio": "^0.3.2",
     "raspi": "^2.0.0",
     "raspi-io": "^5.4.1",
-    "raspi-soft-pwm": "git+https://github.com/tralves/raspi-soft-pwm.git"
+    "raspi-soft-pwm": "^0.9.0"
   },
   "devDependencies": {},
   "scripts": {
