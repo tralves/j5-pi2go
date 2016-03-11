@@ -32,47 +32,6 @@ board.on('ready', function() {
   var lightSensorBR = new five.Sensor({pin: 3,freq: 250,board: new five.Board.Virtual(new five.Expander("PCF8591"))});
   
   // motors
- 
-  
-  // DEBUG  
-  var sensors = {
-    rightObstacleSensor: rightObstacleSensor,
-    leftObstacleSensor: leftObstacleSensor,
-    centerObstacleSensor: centerObstacleSensor,
-    
-    rightLineSensor: rightLineSensor,
-    leftLineSensor: leftLineSensor,
-    
-    //lightSensorFL: lightSensorFL,
-    //lightSensorFR: lightSensorFR,
-    //lightSensorBL: lightSensorBL,
-    //lightSensorBR: lightSensorBR   
-  }
-
-  for (var sensorName in sensors) {
-    var thisSensorName = sensorName;
-    setSensorLogger(thisSensorName, sensors[sensorName]);
-  }
-
-  function setSensorLogger(sensorName, sensor){
-    sensor.on("change", function() {
-      console.log(sensorName+": "+this.value);
-    });
-  }
-  
-  
-  button.on("hold", function() {
-    console.log( "Button held" );
-  });
-
-  button.on("press", function() {
-    console.log( "Button pressed" );
-  });
-
-  button.on("release", function() {
-    console.log( "Button released" );
-  });
-  
   function PiMotor(motorLeftForward, motorLeftBackward, motorRightForward, motorRightBackward) {
   
     this.range = 100; // set the range to 0 - 100
@@ -162,7 +121,66 @@ board.on('ready', function() {
       return Math.min(this.range, Math.max(speed, 0));
     }
   };
+ 
+  // proximity
+  var proximity = new five.Proximity({
+    controller: "HCSR04",
+    pin: 'P1-8'//,
+    //freq: 500
+  });
+
+  // DEBUG  
+  var sensors = {
+    rightObstacleSensor: rightObstacleSensor,
+    leftObstacleSensor: leftObstacleSensor,
+    centerObstacleSensor: centerObstacleSensor,
+    
+    rightLineSensor: rightLineSensor,
+    leftLineSensor: leftLineSensor,
+    
+    //lightSensorFL: lightSensorFL,
+    //lightSensorFR: lightSensorFR,
+    //lightSensorBL: lightSensorBL,
+    //lightSensorBR: lightSensorBR   
+  }
+
+  for (var sensorName in sensors) {
+    var thisSensorName = sensorName;
+    setSensorLogger(thisSensorName, sensors[sensorName]);
+  }
+
+  function setSensorLogger(sensorName, sensor){
+    sensor.on("change", function() {
+      console.log(sensorName+": "+this.value);
+    });
+  }
   
+  
+  button.on("hold", function() {
+    console.log( "Button held" );
+  });
+
+  button.on("press", function() {
+    console.log( "Button pressed" );
+  });
+
+  button.on("release", function() {
+    console.log( "Button released" );
+  });
+
+  var cm = 0;
+  proximity.on("data", function() {
+    cm = this.cm;
+    //console.log("Proximity: ");
+    //console.log("  cm  : ", this.cm);
+    //console.log("  in  : ", this.in);
+    //console.log("-----------------");
+  });
+
+  proximity.on("change", function() {
+    console.log("The obstruction has moved: "+cm);
+    //console.log(this);
+  });
   
   this.repl.inject({
     frontRGBLed: frontRGBLed,
@@ -171,6 +189,7 @@ board.on('ready', function() {
     rightRGBLed: rightRGBLed,
     button: button,
     sensors: sensors,
-    m: new PiMotor()
+    m: new PiMotor(),
+    proximity: proximity
   });
 });

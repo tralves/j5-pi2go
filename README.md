@@ -15,9 +15,7 @@ I went with all the trouble of figuring out the right pins and johnny-five modul
 - Button;
 - Light sensors (front/right, front/left, back/right, back/left);
 - Motors!
-
-### What's *not* working yet :(?
-- Front sonar; (but [there are good perspectives](https://github.com/nebrius/raspi-io/pull/48) in this front!)
+- Front proximity sensor!
 
 ## Installation
 
@@ -52,5 +50,4 @@ Example:
 ```
 
 ## Next steps
-- Get the sonar to work;
 - Make awesome web app to interact with the Pi2Go;
