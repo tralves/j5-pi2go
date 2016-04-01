@@ -24,6 +24,7 @@ pi2go.on('center obstacle', function(val){
 })
 ```
 Video demo:
+
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Iyq3biic_68/0.jpg)](https://www.youtube.com/watch?v=Iyq3biic_68)
 
 ### What's working so far?
