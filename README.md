@@ -8,6 +8,24 @@ This is a [johnny-five](http://johnny-five.io/) interface for the awesome robot 
 
 I went with all the trouble of figuring out the right pins and johnny-five modules (even had to [implement one](https://github.com/tralves/raspi-soft-pwm)) to make your Pi2Go a nodebot ready to go!
 
+### Coming soon!
+
+This lib is becoming more independent and ready to drop on your node.js project. The following features are in the testing phase:
+
+- Store the state of the robot. Ex: 
+```
+a = pi2go.centerObstacle; // a = false;
+```
+- Improved API;
+- Listeners. Ex:
+```
+pi2go.on('center obstacle', function(val){
+  // new obstacle!
+})
+```
+Video demo:
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Iyq3biic_68/0.jpg)](https://www.youtube.com/watch?v=Iyq3biic_68)
+
 ### What's working so far?
 - RGB Leds (front, back, left, right);
 - Obstacle sensors (right, left, center);
