@@ -23,9 +23,10 @@ pi2go.on('center obstacle', function(val){
   // new obstacle!
 })
 ```
-Video demo:
+Video demos:
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Iyq3biic_68/0.jpg)](https://www.youtube.com/watch?v=Iyq3biic_68)
+[![Leds demo](https://img.youtube.com/vi/Iyq3biic_68/0.jpg)](https://www.youtube.com/watch?v=Iyq3biic_68)
+[![Move demo](https://img.youtube.com/vi/dt2PuRKKooY/0.jpg)](https://www.youtube.com/watch?v=dt2PuRKKooY)
 
 ### What's working so far?
 - RGB Leds (front, back, left, right);
@@ -41,32 +42,14 @@ Video demo:
 ```Shell
 git clone https://github.com/tralves/j5-pi2go.git
 npm install
-sudo node j5pi2go.js
+sudo node index.js
 ```
 
-## Playing around
+## Web UI
 
-Once you start the bot (``sudo node j5pi2go.js``), you will see a bunch of logs from the sensors in the console. The following APIs are exposed through repl:
-
-#### Motors
-- ``>>> stop()``: Stops both motors
-- ``>>> forward(speed)``: Sets both motors to move forward at speed. 0 <= speed <= 100
-- ``>>> reverse(speed)``: Sets both motors to reverse at speed. 0 <= speed <= 100
-- ``>>> spinLeft(speed)``: Sets motors to turn opposite directions at speed. 0 <= speed <= 100
-- ``>>> spinRight(speed)``: Sets motors to turn opposite directions at speed. 0 <= speed <= 100
-- ``>>> turnForward(leftSpeed, rightSpeed)``: Moves forwards in an arc by setting different speeds. 0 <= leftSpeed,rightSpeed <= 100
-- ``>>> turnReverse(leftSpeed, rightSpeed)``: Moves backwards in an arc by setting different speeds. 0 <= leftSpeed,rightSpeed <= 100
-- ``>>> go(leftSpeed, rightSpeed)``: controls motors in both directions independently using different positive/negative speeds. -100<= leftSpeed,rightSpeed <= 100    
-
-#### RGBLeds
-See the [johnny-five api](http://johnny-five.io/api/led.rgb/#api) for ``frontRGBLed``|``rightRGBLed``|``backRGBLed``|``leftRGBLed``.
-
-Example:
-``` 
->>> rightRGBLed.color("#ff00ff");
->>> rightRGBLed.on();
->>> rightRGBLed.off();
+```Shell
+git clone https://github.com/tralves/j5-pi2go.git
+cd j5-pi2go-ui
+npm install
+npm run dev
 ```
-
-## Next steps
-- Make awesome web app to interact with the Pi2Go;
