@@ -4,13 +4,24 @@
   "description": "",
   "main": "j5pi2go.js",
   "dependencies": {
+    "dotenv": "^2.0.0",
+    "express": "^4.13.4",
     "johnny-five": "^0.9.30",
     "pigpio": "^0.3.2",
     "raspi": "^2.0.0",
-    "raspi-io": "sesh-kebab/raspi-io",
-    "raspi-soft-pwm": "^0.9.0"
+    "raspi-io": "^6.0.1",
+    "raspi-soft-pwm": "^0.9.0",
+    "socket.io": "^1.4.5",
+    "tiny-emitter": "^1.0.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.1",
+    "gulp-eslint": "^1.0.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-watch": "^4.3.5"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
